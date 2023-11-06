@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import Logo from '@/components/icons/Logo';
 
-interface INavigationLinkProps {
+interface INavigationLinkProps extends React.RefAttributes<HTMLAnchorElement> {
     children: any;
     href: string;
     isActive: boolean;
@@ -84,7 +84,10 @@ const NavigationBar = () => {
                         } left-0 w-full py-5 flex flex-col duration-300 gap-y-5 border-b dark:border-b-neutral-800 border-b-neutral-100 bg-background/60 backdrop-blur`}
                     >
                         {links.map((link, index) => (
-                            <li key={`${link.name}-${index}`}>
+                            <li
+                                key={`${link.name}-${index}`}
+                                onClick={() => setShowMenu(false)}
+                            >
                                 <NavigationLink
                                     href={link.href}
                                     isActive={pathname === link.href}
