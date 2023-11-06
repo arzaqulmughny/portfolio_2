@@ -1,5 +1,7 @@
+import tCategories from './tCategories';
+
 type tProject = {
-    category: string;
+    categories: tCategories[];
     title: string;
     summary: string;
     url: string;
