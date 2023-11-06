@@ -91,18 +91,17 @@ const Repositories = () => {
                 )}
             </ul>
 
-            <Button
-                variant={'secondary'}
-                className='w-full'
+            <a
+                href='https://github.com/zaarza'
+                target='_blank'
             >
-                <a
-                    className='flex items-center self-center w-fit'
-                    href='https://github.com/zaarza'
-                    target='_blank'
+                <Button
+                    variant={'secondary'}
+                    className='w-full'
                 >
                     Visit Github repository <ArrowUpRight className='w-4 ml-1' />
-                </a>
-            </Button>
+                </Button>
+            </a>
         </div>
     );
 };

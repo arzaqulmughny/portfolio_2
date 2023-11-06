@@ -18,20 +18,20 @@ const NavigationLink = (props: INavigationLinkProps) => {
     const { children, href, isActive } = props;
 
     return (
-        <Button
-            type='button'
-            variant={'link'}
-            className='w-full group'
+        <Link
+            href={href}
+            className='group'
         >
-            <Link
-                href={href}
-                className={`text-base duration-300 ${
+            <Button
+                type='button'
+                variant={'link'}
+                className={`text-base duration-300 w-full ${
                     isActive ? 'text-primary font-medium' : 'text-primary/50 group-hover:text-primary font-normal'
                 }`}
             >
                 {children}
-            </Link>
-        </Button>
+            </Button>
+        </Link>
     );
 };
 
@@ -58,11 +58,12 @@ const NavigationBar = () => {
     return (
         <nav className='sticky top-0 z-30 w-full'>
             <div className='flex items-center justify-between px-3 py-2 border-b bg-background/60 dark:border-b-neutral-800 border-b-neutral-100 backdrop-blur'>
-                <Button variant={'ghost'}>
-                    <Link href='/'>
+                <Link href='/'>
+                    <Button variant={'ghost'}>
                         <Logo className='fill-primary' />
-                    </Link>
-                </Button>
+                    </Button>
+                </Link>
+
                 <div className='flex gap-x-4'>
                     <Button
                         variant='ghost'

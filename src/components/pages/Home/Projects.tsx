@@ -18,17 +18,15 @@ const Projects = () => {
                 data={projects}
                 limit={2}
             />
-            <Button
-                variant={'secondary'}
-                className='self-center w-full'
-            >
-                <Link
-                    className='flex items-center'
-                    href='/projects'
+
+            <Link href='/projects'>
+                <Button
+                    variant={'secondary'}
+                    className='w-full'
                 >
                     More projects <ArrowUpRight className='w-4 ml-1' />
-                </Link>
-            </Button>
+                </Button>
+            </Link>
         </div>
     );
 };

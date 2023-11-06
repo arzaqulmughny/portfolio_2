@@ -25,19 +25,20 @@ const ProjectItem = (props: IProjectItemProps) => {
                 <H3>{data.title}</H3>
                 <P className='h-[90px] line-clamp-3 text-primary/80'>{data.summary}</P>
             </div>
-            <Button
-                variant={'outline'}
-                className='self-end w-fit'
+
+            <a
+                className='self-end '
+                href={data.url}
+                target='_blank'
             >
-                <a
-                    className='flex items-center'
-                    href={data.url}
-                    target='_blank'
+                <Button
+                    variant={'outline'}
+                    className='flex items-center w-fit'
                 >
                     Details
                     <ArrowRight className='w-4 ml-1' />
-                </a>
-            </Button>
+                </Button>
+            </a>
         </div>
     );
 };
