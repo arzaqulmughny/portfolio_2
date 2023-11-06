@@ -2,8 +2,7 @@ type tProject = {
     category: string;
     title: string;
     summary: string;
-    description: string;
-    slug: string;
+    url: string;
     thumbnail: string;
 };
 

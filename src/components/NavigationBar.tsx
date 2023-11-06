@@ -7,7 +7,33 @@ import { Menu, Moon, X, Sun } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import Logo from '@/components/icons/Logo';
-import NavigationLink from '@/components/NavigationLink';
+
+interface INavigationLinkProps {
+    children: any;
+    href: string;
+    isActive: boolean;
+}
+
+const NavigationLink = (props: INavigationLinkProps) => {
+    const { children, href, isActive } = props;
+
+    return (
+        <Button
+            type='button'
+            variant={'link'}
+            className='w-full group'
+        >
+            <Link
+                href={href}
+                className={`text-base duration-300 ${
+                    isActive ? 'text-primary font-medium' : 'text-primary/50 group-hover:text-primary font-normal'
+                }`}
+            >
+                {children}
+            </Link>
+        </Button>
+    );
+};
 
 const links = [
     {

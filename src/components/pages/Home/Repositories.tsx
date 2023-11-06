@@ -1,22 +1,39 @@
-// https://api.github.com/users/zaarza/repos
-
-import { ArrowUpRight, RefreshCcw } from 'lucide-react';
-import { Button } from './ui/button';
-import H2 from './ui/typography/h2';
-import P from './ui/typography/p';
+'use client';
 import useSWR from 'swr';
-import { Skeleton } from './ui/skeleton';
+import { ArrowUpRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import H2 from '@/components/ui/typography/h2';
+import P from '@/components/ui/typography/p';
+import { Skeleton } from '@/components/ui/skeleton';
 
-const fetcher = () =>
-    fetch('https://api.github.com/users/zaarza/repos?sort=created&per_page=3').then((result) => result.json());
+type tRepository = {
+    html_url: string;
+    name: string;
+};
 
-const RepositorySection = () => {
+const useRepositories = (sortBy: string, perPage: number) => {
+    const fetcher = () =>
+        fetch(`https://api.github.com/users/zaarza/repos?sort=${sortBy}&per_page=${perPage}`).then((result) =>
+            result.json()
+        );
+
     const { data, isLoading, error, mutate } = useSWR('repository', fetcher, {
         fallbackData: [],
         loadingTimeout: 2000,
         revalidateOnFocus: false,
         shouldRetryOnError: false,
     });
+
+    return {
+        data,
+        isLoading,
+        error,
+        mutate,
+    };
+};
+
+const Repositories = () => {
+    const { data, isLoading, mutate } = useRepositories('created', 3);
 
     return (
         <div className='flex flex-col gap-y-10'>
@@ -45,7 +62,7 @@ const RepositorySection = () => {
 
                 {!isLoading &&
                     data.length > 1 &&
-                    data.map((repository: unknown, index: number) => (
+                    data.map((repository: tRepository, index: number) => (
                         <li
                             className='flex items-center gap-x-4 group'
                             key={`repository-${index}`}
@@ -90,4 +107,4 @@ const RepositorySection = () => {
     );
 };
 
-export default RepositorySection;
+export default Repositories;
