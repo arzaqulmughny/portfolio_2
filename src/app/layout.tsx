@@ -20,14 +20,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             >
                 <head>
                     <link
-                        rel='shortcut icon'
-                        href='/assets/icons/favicon.ico'
-                        type='image/x-icon'
+                        rel='apple-touch-icon'
+                        sizes='180x180'
+                        href='/assets/icons/favicon/apple-touch-icon.png'
                     />
                     <link
                         rel='icon'
-                        href='/assets/icons/favicon.ico'
-                        type='image/x-icon'
+                        type='image/png'
+                        sizes='32x32'
+                        href='/assets/icons/favicon/favicon-32x32.png'
+                    />
+                    <link
+                        rel='icon'
+                        type='image/png'
+                        sizes='16x16'
+                        href='/assets/icons/favicon/favicon-16x16.png'
                     />
                 </head>
                 <body className='relative'>
