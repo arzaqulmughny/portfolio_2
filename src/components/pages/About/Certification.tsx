@@ -2,6 +2,7 @@ import H2 from '@/components/ui/typography/h2';
 import P from '@/components/ui/typography/p';
 import tCertificate from '@/types/tCertificate';
 import certificates from '@/data/certificates';
+import { ArrowUpRight } from 'lucide-react';
 
 interface ICertificateItemProps {
     data: tCertificate;
@@ -32,9 +33,9 @@ const CertificateItem = (props: ICertificateItemProps) => {
                             key={`${data.title}-links-${index}`}
                             href={link.url}
                             target='_blank'
-                            className='underline underline-offset-4'
+                            className='flex items-center underline underline-offset-4 gap-x-2'
                         >
-                            {link.name} ↗
+                            {link.name} <ArrowUpRight className='w-4 aspect-square' />
                         </a>
                     ))}
                 </div>
