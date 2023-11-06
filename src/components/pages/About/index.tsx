@@ -1,6 +1,10 @@
 import Certification from '@/components/pages/About/Certification';
 import Experience from '@/components/pages/About/Experience';
 import Description from '@/components/pages/About/Description';
+import Skills from './Skills';
+import ToolMastery from './ToolMastery';
+import Education from './Education';
+import Contact from './Contact';
 
 const About = () => {
     return (
@@ -8,6 +12,10 @@ const About = () => {
             <Description />
             <Experience />
             <Certification />
+            <Skills />
+            <ToolMastery />
+            <Education />
+            <Contact />
         </div>
     );
 };

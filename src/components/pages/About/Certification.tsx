@@ -11,7 +11,7 @@ const CertificateItem = (props: ICertificateItemProps) => {
     const { data } = props;
 
     return (
-        <div className='grid grid-cols-[auto_auto] grid-rows-[auto_auto] gap-x-4 items-center'>
+        <div className='grid grid-cols-[auto_auto] grid-rows-[auto_auto] gap-x-4 items-center justify-start'>
             <div className='w-2 h-2 rounded-full dark:bg-neutral-800 bg-primary/80' />
 
             <div>
