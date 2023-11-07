@@ -58,7 +58,7 @@ const NavigationBar = () => {
     return (
         <>
             <nav className='sticky top-0 z-10 w-full backdrop-blur'>
-                <div className='flex items-center justify-between px-3 py-2 border border-b bg-background/60 dark:border-b-neutral-800 border-b-neutral-100'>
+                <div className='flex items-center justify-between px-3 py-2 border-b bg-background/60 dark:border-b-neutral-800 border-b-neutral-100'>
                     <Link href='/'>
                         <Button variant={'ghost'}>
                             <Logo className='fill-primary' />
