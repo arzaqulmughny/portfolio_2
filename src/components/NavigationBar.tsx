@@ -57,7 +57,7 @@ const NavigationBar = () => {
 
     return (
         <>
-            <nav className='sticky top-0 w-full backdrop-blur'>
+            <nav className='sticky top-0 z-10 w-full backdrop-blur'>
                 <div className='flex items-center justify-between px-3 py-2 border border-b bg-background/60 dark:border-b-neutral-800 border-b-neutral-100'>
                     <Link href='/'>
                         <Button variant={'ghost'}>
@@ -81,7 +81,7 @@ const NavigationBar = () => {
                             {showMenu ? <X /> : <Menu />}
                         </Button>
                         <ul
-                            className={`absolute bg-background md:bg-background/0 -z-10 md:static md:flex-row md:backdrop-blur-0 md:border-b-0 md:order-1 md:-z-0 md:p-0 md:w-fit left-0 w-full py-5 flex flex-col duration-300 gap-y-5 border-b dark:border-b-neutral-800 border-b-neutral-100 ${
+                            className={`absolute bg-background md:bg-background/0 -z-[1] md:static md:flex-row md:backdrop-blur-0 md:border-b-0 md:order-1 md:-z-0 md:p-0 md:w-fit left-0 w-full py-5 flex flex-col duration-300 gap-y-5 border-b dark:border-b-neutral-800 border-b-neutral-100 ${
                                 showMenu ? 'top-full' : '-top-[200px]'
                             }`}
                         >
