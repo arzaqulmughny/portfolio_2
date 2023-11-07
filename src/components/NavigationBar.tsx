@@ -56,52 +56,53 @@ const NavigationBar = () => {
     const pathname = usePathname();
 
     return (
-        <nav className='sticky top-0 z-30 w-full'>
-            <div className='flex items-center justify-between px-3 py-2 border border-b backdrop-blur bg-background/60 dark:border-b-neutral-800 border-b-neutral-100'>
-                <Link href='/'>
-                    <Button variant={'ghost'}>
-                        <Logo className='fill-primary' />
-                    </Button>
-                </Link>
+        <>
+            <nav className='sticky top-0 w-full backdrop-blur'>
+                <div className='flex items-center justify-between px-3 py-2 border border-b bg-background/60 dark:border-b-neutral-800 border-b-neutral-100'>
+                    <Link href='/'>
+                        <Button variant={'ghost'}>
+                            <Logo className='fill-primary' />
+                        </Button>
+                    </Link>
 
-                <div className='flex gap-x-4'>
-                    <Button
-                        variant='ghost'
-                        onClick={() => toggleTheme(theme, setTheme)}
-                        className='stroke-primary md:order-2'
-                    >
-                        {theme === 'dark' ? <Moon /> : <Sun />}
-                    </Button>
-                    <Button
-                        onClick={() => setShowMenu(!showMenu)}
-                        variant='ghost'
-                        className='stroke-primary md:hidden'
-                    >
-                        {showMenu ? <X /> : <Menu />}
-                    </Button>
-                </div>
-            </div>
-
-            <ul
-                className={`absolute backdrop-blur bg-background/60 md:static md:flex-row md:backdrop-filter-none -z-10 md:border-b-0 md:order-1 md:-z-0 md:p-0 md:w-fit left-0 w-full py-5 flex flex-col duration-300 gap-y-5 border-b dark:border-b-neutral-800 border-b-neutral-100 ${
-                    showMenu ? 'top-full' : '-top-[200px]'
-                }`}
-            >
-                {links.map((link, index) => (
-                    <li
-                        key={`${link.name}-${index}`}
-                        onClick={() => setShowMenu(false)}
-                    >
-                        <NavigationLink
-                            href={link.href}
-                            isActive={pathname === link.href}
+                    <div className='flex gap-x-4'>
+                        <Button
+                            variant='ghost'
+                            onClick={() => toggleTheme(theme, setTheme)}
+                            className='stroke-primary md:order-2'
                         >
-                            {link.name}
-                        </NavigationLink>
-                    </li>
-                ))}
-            </ul>
-        </nav>
+                            {theme === 'dark' ? <Moon /> : <Sun />}
+                        </Button>
+                        <Button
+                            onClick={() => setShowMenu(!showMenu)}
+                            variant='ghost'
+                            className='stroke-primary md:hidden'
+                        >
+                            {showMenu ? <X /> : <Menu />}
+                        </Button>
+                        <ul
+                            className={`absolute bg-background md:bg-background/0 -z-10 md:static md:flex-row md:backdrop-blur-0 md:border-b-0 md:order-1 md:-z-0 md:p-0 md:w-fit left-0 w-full py-5 flex flex-col duration-300 gap-y-5 border-b dark:border-b-neutral-800 border-b-neutral-100 ${
+                                showMenu ? 'top-full' : '-top-[200px]'
+                            }`}
+                        >
+                            {links.map((link, index) => (
+                                <li
+                                    key={`${link.name}-${index}`}
+                                    onClick={() => setShowMenu(false)}
+                                >
+                                    <NavigationLink
+                                        href={link.href}
+                                        isActive={pathname === link.href}
+                                    >
+                                        {link.name}
+                                    </NavigationLink>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </>
     );
 };
 
