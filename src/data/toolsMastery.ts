@@ -51,12 +51,16 @@ const toolsMastery: tToolMastery[] = [
         name: 'Others',
         list: [
             {
+                name: 'Version Control & Remote Repository',
+                value: 'Git, Github',
+            },
+            {
                 name: 'Containerization',
                 value: 'Docker',
             },
             {
-                name: 'UI Design',
-                value: 'Figma',
+                name: 'Design Tool',
+                value: 'Figma, Inkscape',
             },
         ],
     },
