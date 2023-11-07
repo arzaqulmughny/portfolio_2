@@ -10,9 +10,9 @@ const SkillItem = (props: ISkillItem) => {
     const { name } = props;
 
     return (
-        <div className='flex items-center gap-x-4'>
-            <div className='w-2 h-2 rounded-full dark:bg-neutral-800 bg-primary/80' />
-            <P className='text-primary/80'>{name}</P>
+        <div className='grid grid-cols-[auto_auto] gap-x-4 items-center justify-start'>
+            <div className='w-2 rounded-full aspect-square dark:bg-neutral-800 bg-primary/80' />
+            <P className='text-primary/80 cols-start-2'>{name}</P>
         </div>
     );
 };
