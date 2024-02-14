@@ -86,7 +86,7 @@ const NavigationBar = () => {
                         </Button>
                         <ul
                             className={`absolute bg-background md:bg-background/0 -z-[1] md:static md:flex-row md:backdrop-blur-0 md:border-b-0 md:order-1 md:-z-0 md:p-0 md:w-fit left-0 w-full py-5 flex flex-col duration-300 gap-y-5 border-b dark:border-b-neutral-800 border-b-neutral-100 ${
-                                showMenu ? 'top-full' : '-top-[200px]'
+                                showMenu ? 'top-full' : '-top-[250px]'
                             }`}
                         >
                             {links.map((link, index) => (
