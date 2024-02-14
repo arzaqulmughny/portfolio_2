@@ -8,7 +8,7 @@ const Description = () => {
             <P className='text-primary/80'>
                 A 20 years old web developer with expertise as a front-end and backend technologies. creating visually
                 appealing and highly functional websites. With a keen eye for detail and a commitment to delivering high
-                quality work,
+                quality work.
             </P>
         </div>
     );
