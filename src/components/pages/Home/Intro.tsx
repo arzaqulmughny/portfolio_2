@@ -18,8 +18,9 @@ const Intro = () => {
             </H1>
 
             <P className='text-justify'>
-                a 20-year-old enthusiast with a strong passion for the world of web development. As a recent graduate, I
-                {"'"}ve taken the self-taught route and successfully crafted dynamic web applications from scratch.{' '}
+                A 20 years old web developer with expertise as a front-end and backend technologies. creating visually
+                appealing and highly functional websites. With a keen eye for detail and a commitment to delivering high
+                quality work,
             </P>
         </div>
     );

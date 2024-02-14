@@ -6,9 +6,9 @@ const Description = () => {
         <div className='flex flex-col gap-y-4'>
             <H2>About Me</H2>
             <P className='text-primary/80'>
-                A self-taught web developer, who is looking for opportunities to work, has a project-based virtual
-                internship experience for one month and has created several complete web applications from the design
-                part to the frontend and backend development stages
+                A 20 years old web developer with expertise as a front-end and backend technologies. creating visually
+                appealing and highly functional websites. With a keen eye for detail and a commitment to delivering high
+                quality work,
             </P>
         </div>
     );

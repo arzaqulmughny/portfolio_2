@@ -2,6 +2,14 @@ import tExperience from '@/types/tExperience';
 
 const experiences: tExperience[] = [
     {
+        position: 'Web Developer',
+        company: 'PT Xeno Persada Teknologi',
+        title: 'Front End Web Developer',
+        time: 'January 2024',
+        duration: 'Present',
+        description: 'Converting existing html,css and javascript (jquery) into NextJS, Slicing UI design',
+    },
+    {
         position: 'Internship',
         company: 'Core Initiative',
         title: 'Project-Based Virtual Intern : Front End Developer Core Initiative x Rakamin Academy',
