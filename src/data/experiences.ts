@@ -2,12 +2,12 @@ import tExperience from '@/types/tExperience';
 
 const experiences: tExperience[] = [
     {
-        position: 'Web Developer',
+        position: 'Full Time',
         company: 'PT Xeno Persada Teknologi',
         title: 'Front End Web Developer',
         time: 'January 2024',
         duration: 'Present',
-        description: 'Converting existing html,css and javascript (jquery) into NextJS, Slicing UI design',
+        description: 'Converting existing html,css and javascript (jquery) template into NextJS, Slicing UI design',
     },
     {
         position: 'Internship',
